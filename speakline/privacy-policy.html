@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speakline Privacy Policy</title>
+<style>
+  :root { --primary: #4F46E5; --ink: #111827; --muted: #6B7280; --border: #E5E7EB; --bg: #FFFFFF; --bg-soft: #F9FAFB; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: var(--ink); line-height: 1.7; margin: 0; background: var(--bg-soft); }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 48px 24px 80px; background: var(--bg); }
+  header { border-bottom: 1px solid var(--border); padding-bottom: 24px; margin-bottom: 32px; }
+  header h1 { font-size: 28px; margin: 0 0 8px; letter-spacing: -0.02em; }
+  header p { margin: 0; color: var(--muted); }
+  .badge { display: inline-block; background: #EEF2FF; color: var(--primary); font-size: 13px; font-weight: 600; border-radius: 999px; padding: 3px 12px; margin-bottom: 12px; }
+  h1 { font-size: 20px; margin: 36px 0 12px; padding-top: 8px; border-top: 1px solid var(--border); color: var(--ink); }
+  h1:first-child { border-top: none; }
+  h2 { font-size: 16px; margin: 28px 0 10px; color: var(--ink); }
+  p { margin: 0 0 14px; }
+  ul, ol { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0 18px; font-size: 14px; }
+  th, td { text-align: left; border: 1px solid var(--border); padding: 9px 12px; vertical-align: top; }
+  th { background: var(--bg-soft); font-weight: 600; }
+  a { color: var(--primary); }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--border); color: var(--muted); font-size: 13px; }
+  @media (max-width: 600px) { .wrap { padding: 32px 18px 60px; } header h1 { font-size: 24px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <span class="badge">Speakline</span>
+  <h1>Privacy Policy</h1>
+</header>
+<h1>Speakline Privacy Policy</h1>
+<p><em>Last updated: August 20, 2026</em></p>
+<p>This policy applies to the Speakline mobile application ("Speakline", "we", "us", "our") available on the Google Play Store. Speakline is a dictation (speech-to-text) application that turns your speech into text and inserts it into whatever text field you are currently focused on.</p>
+<p>By using Speakline, you agree to the collection and use of information in accordance with this Privacy Policy. If you do not agree, please do not use the application.</p>
+<hr />
+<h2>1. Information We Collect</h2>
+<h3>1.1 Account Information</h3>
+<p>When you create an account or sign in, we collect:</p>
+<ul>
+<li><strong>Email address</strong> (required to sign up or sign in with Google).</li>
+<li><strong>Display name</strong> (derived from your Google profile name or your email address).</li>
+<li>Your <strong>subscription/plan tier</strong> and related service timestamps.</li>
+</ul>
+<h3>1.2 Dictation Content</h3>
+<p>When you use Speakline, we process and store your dictations:</p>
+<ul>
+<li><strong>Audio</strong>: When cloud transcription is enabled, audio from your microphone is streamed to our transcription provider (Deepgram) to be converted to text. See Sections 4 and 5.</li>
+<li><strong>Transcribed text</strong>: The full text of each dictation is stored on our servers as part of your dictation history, together with:</li>
+<li>the name and package of the app you dictated into,</li>
+<li>word count, duration, language, and timestamp,</li>
+<li>whether transcription ran on-device or in the cloud.</li>
+</ul>
+<h3>1.3 Usage and Diagnostic Data</h3>
+<p>We collect limited usage data to operate and improve the service:</p>
+<ul>
+<li>The <strong>timezone (IANA ID)</strong> of your device, used to show daily usage charts.</li>
+<li><strong>Analytics events</strong> (see Section 6) such as dictation completed, dictation failed, subscription started, and sign-in method.</li>
+<li><strong>Crash and error diagnostics</strong> via Firebase Crashlytics (where enabled).</li>
+</ul>
+<h3>1.4 What We Do NOT Collect</h3>
+<ul>
+<li><strong>We never show ads</strong> and do not use advertising SDKs.</li>
+<li>We do <strong>not</strong> collect your location, contacts, camera, calendar, SMS, or media files.</li>
+<li>Transcripts and the apps you dictate into are <strong>never included in analytics events</strong>.</li>
+<li>We do not sell your personal information.</li>
+</ul>
+<hr />
+<h2>2. How We Use Information</h2>
+<p>We use the information we collect to:</p>
+<ul>
+<li>Provide, maintain, and improve Speakline.</li>
+<li>Transcribe your speech to text and insert it where requested.</li>
+<li>Store and display your dictation history.</li>
+<li>Manage your account, trial, and subscription.</li>
+<li>Monitor usage trends and diagnose technical issues.</li>
+<li>Send you service-related and trial-related notifications.</li>
+</ul>
+<hr />
+<h2>3. How We Share Information</h2>
+<p>We do not sell your personal information. We share data only with service providers who process it on our behalf to run the service:</p>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Supabase</strong></td>
+<td>Hosting our backend database and authentication (stores your account and dictation history).</td>
+</tr>
+<tr>
+<td><strong>Deepgram</strong></td>
+<td>Cloud speech-to-text transcription (processes your audio).</td>
+</tr>
+<tr>
+<td><strong>PostHog</strong></td>
+<td>Product analytics (usage events only, never transcripts).</td>
+</tr>
+<tr>
+<td><strong>Google (Firebase Crashlytics)</strong></td>
+<td>Crash and error reporting.</td>
+</tr>
+<tr>
+<td><strong>RevenueCat</strong></td>
+<td>Subscription and entitlement management.</td>
+</tr>
+<tr>
+<td><strong>Google Play Billing</strong></td>
+<td>Processing your subscription payments. No card details ever pass through Speakline.</td>
+</tr>
+</tbody>
+</table>
+<p>These providers are bound by their own privacy policies and process data solely to perform services for us.</p>
+<hr />
+<h2>4. Audio and Speech Recognition</h2>
+<p>Speakline offers two transcription engines:</p>
+<ul>
+<li><strong>On-device transcription</strong>: Audio is processed locally on your device using the platform speech recognizer and is sent off-device only to the extent your operating system's own recognizer requires (on some devices this may route through Google's network recognizer).</li>
+<li><strong>Cloud transcription</strong>: Audio is streamed live over an encrypted WebSocket connection to our provider, <strong>Deepgram</strong>, solely to convert it to text. Deepgram does not store your audio.</li>
+</ul>
+<p>Our server controls when cloud transcription is available. When cloud transcription is unavailable, Speakline automatically falls back to on-device transcription.</p>
+<p><strong>Speakline transcribes, it does not translate.</strong> No generative AI models are applied to your content.</p>
+<hr />
+<h2>5. What Happens to Your Dictation</h2>
+<ul>
+<li><strong>Audio</strong> is only captured while you are actively recording a dictation and is transmitted to our transcription provider to be turned into text; it is not stored there.</li>
+<li><strong>Text transcripts</strong> are stored on our servers linked to your account so you can view your history. If you delete a dictation or your account, the associated content is removed (see Section 8).</li>
+</ul>
+<hr />
+<h2>6. Analytics and Diagnostics</h2>
+<p>We use PostHog to understand how the application is used. Analytics events contain <strong>no transcripts</strong> and <strong>no information about the apps you dictate into</strong>. We collect closed, predefined event names (e.g., "dictation_completed", "dictation_failed", "subscription_started"). We use your Supabase user ID as an analytics identifier to correlate events.</p>
+<p>We use Firebase Crashlytics to receive crash reports that help us fix bugs. Crash reports may contain device and technical diagnostic information.</p>
+<hr />
+<h2>7. Permissions and System Features Used</h2>
+<p>To work the way you expect, Speakline uses the following device capabilities:</p>
+<table>
+<thead>
+<tr>
+<th>Permission / Feature</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Microphone</strong></td>
+<td>To capture your speech for transcription (required).</td>
+</tr>
+<tr>
+<td><strong>System overlay (display over other apps)</strong></td>
+<td>To show the Speakline bubble on top of other apps.</td>
+</tr>
+<tr>
+<td><strong>Foreground service</strong></td>
+<td>To keep the dictation session active while you record.</td>
+</tr>
+<tr>
+<td><strong>Notifications</strong></td>
+<td>To notify you about your trial and service messages.</td>
+</tr>
+<tr>
+<td><strong>Accessibility service</strong></td>
+<td>To read — only at the moment of insertion — the currently focused editable text field so your dictated text can be inserted, and to detect when you switch focus. You enable this manually in system Settings. Speakline does not filter keystrokes or collect the contents of other apps beyond the field into which you instruct it to insert text.</td>
+</tr>
+<tr>
+<td><strong>Internet access</strong></td>
+<td>To transmit dictations, manage your account, and check entitlements.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>8. Data Retention and Your Choices</h2>
+<ul>
+<li><strong>Dictation history</strong>: stored in your account and displayed in the app. You can delete individual dictations at any time.</li>
+<li><strong>Account deletion</strong>: deleting your account removes your profile and associated dictation history from our servers.</li>
+<li><strong>Analytics</strong>: aggregated events may be retained in accordance with our analytics provider's standards; they do not contain transcripts.</li>
+<li>You can <strong>disable the microphone permission</strong>, <strong>disable the overlay</strong>, and <strong>disable the Accessibility service</strong> at any time via your device settings, which will limit Speakline's functionality.</li>
+</ul>
+<hr />
+<h2>9. Data Security</h2>
+<p>We transmit all data in transit using industry-standard encryption (TLS/WebSocket secure connections). Audio and transcripts are streamed/stored through security-hardened, PCI-DSS-compliant and SOC 2-compliant service providers. We restrict access to personal data to authorized personnel and service providers that need it to operate the service.</p>
+<p>No method of transmission over the Internet or method of electronic storage is 100% secure; while we strive to protect your personal information, we cannot guarantee its absolute security.</p>
+<hr />
+<h2>10. Children's Privacy</h2>
+<p>Speakline is not directed to children under the age of 13 (or the minimum age required in your country). We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us so we can delete it.</p>
+<hr />
+<h2>11. Changes to This Privacy Policy</h2>
+<p>We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new Privacy Policy on this page and, where appropriate, within the application. The "Last updated" date at the top indicates when it was last revised. Your continued use of Speakline after changes constitute acceptance of the revised policy.</p>
+<hr />
+<h2>12. Contact Us</h2>
+<p>If you have any questions about this Privacy Policy or how your data is handled, please contact us at:</p>
+<p><strong>TSolutions DWC LLC</strong>
+Email: <strong>info@tsolutions-dwc.com</strong></p>
+<hr />
+<p><em>This policy is based on the Speakline codebase as of August 20, 2026.</em></p>
+<footer>&copy; 2026 TSolutions DWC LLC &middot; Speakline</footer>
+</div>
+</body>
+</html>
