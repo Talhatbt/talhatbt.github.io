@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tillo Privacy Policy</title>
+<meta name="description" content="What Tillo, the offline point-of-sale app, collects, where your shop's data is kept, and how to remove it.">
+<meta name="theme-color" content="#0E3B2C">
+<style>
+  /* Tokens are the Tillo phone palette (ui/phone/theme/TilloTheme.kt in the app),
+     so the page looks like the app that links to it. System fonts only: the
+     policy says the page loads nothing from anywhere else. */
+  :root {
+    color-scheme: light dark;
+    --page: #F4F2EC; --card: #FFFFFF; --line: #E2DFD4; --track: #F1EFE8;
+    --ink: #13201A; --muted: #545E59; --soft: #6B756F;
+    --forest: #0E3B2C; --forest-raised: #214A3D; --lime: #D4F36B; --lime-soft: #EEF5D6;
+    --on-forest-muted: #B9CEC4; --link: #1F6B4A;
+    --warn-soft: #FCEFD9; --warn-ink: #5C2F04;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --page: #0B1712; --card: #12221B; --line: #22362C; --track: #182A22;
+      --ink: #EAF0EC; --muted: #A9B8B0; --soft: #8E9D95;
+      --lime-soft: #23331D; --link: #D4F36B;
+      --warn-soft: #3A2A14; --warn-ink: #F6D9AE;
+    }
+  }
+  :root[data-theme="dark"] {
+    --page: #0B1712; --card: #12221B; --line: #22362C; --track: #182A22;
+    --ink: #EAF0EC; --muted: #A9B8B0; --soft: #8E9D95;
+    --lime-soft: #23331D; --link: #D4F36B;
+    --warn-soft: #3A2A14; --warn-ink: #F6D9AE;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--page); color: var(--ink);
+    font: 400 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 32px 16px 64px; }
+
+  .hero {
+    position: relative; overflow: hidden; background: var(--forest); color: #FFFFFF;
+    border-radius: 24px; padding: 28px 28px 30px; margin-bottom: 16px;
+  }
+  .hero::after {
+    content: ""; position: absolute; right: -70px; top: -70px; width: 240px; height: 240px;
+    border-radius: 50%; background: var(--forest-raised); opacity: 0.6; pointer-events: none;
+  }
+  .brand { position: relative; z-index: 1; display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
+  .brand .mark {
+    width: 40px; height: 40px; border-radius: 12px; background: var(--lime); color: var(--forest);
+    display: grid; place-items: center; font-weight: 800; font-size: 22px; line-height: 1;
+  }
+  .brand span { font-weight: 700; font-size: 20px; letter-spacing: -0.4px; }
+  .hero > *:not(.brand) { position: relative; z-index: 1; }
+  .eyebrow { font-size: 12px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--on-forest-muted); margin: 0 0 10px; font-weight: 600; }
+  .hero h1 { font-size: 40px; line-height: 1.05; letter-spacing: -1.2px; margin: 0 0 12px; }
+  .hero p { margin: 0; color: var(--on-forest-muted); }
+  .updated {
+    display: inline-block; margin-top: 18px; padding: 4px 12px; border-radius: 999px;
+    background: var(--lime); color: var(--forest); font-size: 13px; font-weight: 600;
+  }
+
+  main { background: var(--card); border: 1px solid var(--line); border-radius: 24px; padding: 28px; }
+  h2 { font-size: 22px; letter-spacing: -0.4px; line-height: 1.25; margin: 40px 0 12px; display: flex; align-items: center; gap: 12px; }
+  h2 .num {
+    flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--forest); color: var(--lime);
+    display: grid; place-items: center; font-size: 14px; font-weight: 700; letter-spacing: 0;
+  }
+  h3 { font-size: 17px; margin: 24px 0 8px; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--link); text-underline-offset: 2px; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; background: var(--track); padding: 1px 6px; border-radius: 6px; }
+
+  .box { background: var(--lime-soft); border-radius: 16px; padding: 16px 18px; margin: 16px 0; }
+  .box.warn { background: var(--warn-soft); color: var(--warn-ink); }
+  .box p:last-child, .box ul:last-child { margin-bottom: 0; }
+
+  .table { overflow-x: auto; margin: 12px 0 18px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 520px; }
+  th, td { text-align: left; border-bottom: 1px solid var(--line); padding: 10px 12px; vertical-align: top; }
+  th { background: var(--track); font-weight: 600; }
+
+  footer {
+    display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px;
+    margin-top: 24px; padding: 0 4px; color: var(--soft); font-size: 13px;
+  }
+
+  @media (max-width: 600px) {
+    .hero { padding: 24px 20px 26px; border-radius: 20px; }
+    .hero h1 { font-size: 32px; }
+    main { padding: 20px 16px; border-radius: 20px; }
+    h2 { font-size: 19px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <div class="brand"><div class="mark" aria-hidden="true">T</div><span>Tillo</span></div>
+  <p class="eyebrow">Legal &middot; TSolutions DWC LLC</p>
+  <h1>Privacy Policy</h1>
+  <p>What Tillo collects, where your shop's data lives, and how to remove it.</p>
+  <span class="updated">Last updated: October 22, 2026</span>
+</header>
+
+<main>
+<p>This policy applies to the Tillo point-of-sale application for Android ("Tillo", "we", "us", "our"), published on Google Play by TSolutions DWC LLC under the package name <code>com.tsolution.smartpos</code>. Tillo lets a shop sell, take payments, print or share receipts and keep track of products and stock, all from a phone.</p>
+
+<p>By using Tillo you agree to the collection and use of information in accordance with this Privacy Policy. If you do not agree, please do not use the application.</p>
+
+<div class="box">
+<p><strong>In short.</strong> Tillo has <strong>no sign-up and no account</strong>. A shop set up on the phone is kept <strong>only on that phone</strong>: your products, prices, stock, sales and staff are never sent to us. There is <strong>no advertising, no analytics and no crash reporting</strong> in the app. The only things that leave your phone are what Google Play and RevenueCat need to sell and verify a Tillo Pro subscription, and the limited diagnostic data Google's on-device barcode scanner reports. We do not sell your data.</p>
+</div>
+
+<h2><span class="num">1</span>Information we collect</h2>
+
+<h3>Your shop's data — kept on your phone</h3>
+<p>When you set up Tillo as a new shop, everything you enter is stored in a private database inside the app's own storage on your phone:</p>
+<ul>
+  <li>Your shop's details: its name, phone number, address, currency, tax settings, and the receipt header and footer you write.</li>
+  <li>Products: names, prices, cost prices, barcodes, categories, options such as sizes and colours, and stock levels and stock movements.</li>
+  <li>Sales: the items sold, totals, tax, discounts, how each sale was paid (cash, card or wallet — recorded only; Tillo does not process card or wallet payments), and invoice numbers.</li>
+  <li>Staff and shifts, if you use them: staff names, and sign-in PINs stored only as salted, one-way hashes. Shift records hold opening floats and cash-up counts.</li>
+</ul>
+<p><strong>We never receive this data, cannot see it, and hold no copy of it.</strong> Tillo has no server for a phone-owned shop. The app also opts out of Android's automatic cloud backup, so the system does not copy it anywhere either — the only copies are the backup files you choose to make (section 4).</p>
+
+<h3>Subscription information</h3>
+<p>Tillo is free to use, with an optional <strong>Tillo Pro</strong> subscription. Purchases are made through <strong>Google Play</strong> and verified through <strong>RevenueCat</strong>. RevenueCat assigns your installation a random, anonymous identifier — it is not linked to your name, email or shop — and receives the product you bought, its purchase and renewal status, and basic device information such as the app version, operating system and your IP address. <strong>We never receive your card or bank details</strong>; those stay with Google.</p>
+<p>Your plan is remembered on the phone, so Tillo keeps working when it is offline.</p>
+
+<h3>Barcode scanner diagnostics</h3>
+<p>The camera scanner uses Google's <strong>ML Kit</strong> barcode scanning, with its model bundled inside the app, so codes are read <strong>entirely on your phone</strong>. Camera images are never stored and never sent to us or to Google. ML Kit may send Google limited technical data about how the scanner is performing — such as device model, operating system, app version and scan performance metrics — under <a href="https://developers.google.com/ml-kit/terms">Google's ML Kit terms</a>. It does not include the images or the barcodes read.</p>
+
+<h3>If you use an activation code from a business</h3>
+<p>Instead of setting up a new shop, a business that uses the SmartPOS back office can give you an activation code to connect the phone to its account. In that case the phone exchanges data with the SmartPOS cloud service we operate for that business: it receives the business's products, settings and staff, and sends it the sales made on the phone, which staff member made them, and the shift records. That data is held on behalf of <strong>the business that issued the code</strong>, which decides how it is used and is your first point of contact about it. A phone set up as its own shop never contacts this service.</p>
+
+<h2><span class="num">2</span>What we do not collect</h2>
+<ul>
+  <li>No account, email address, phone number or password is ever asked for.</li>
+  <li>No advertising and no advertising ID.</li>
+  <li>No analytics, usage tracking or crash reporting.</li>
+  <li>No location. Bluetooth is used only to connect to printers you have already paired, so the app never scans for nearby devices.</li>
+  <li>No contacts, photos, files, microphone or SMS. Backup files are read and written only through the Android file picker, one file at a time, when you choose.</li>
+  <li>No personal information about your customers. Tillo does not ask for a customer's name, phone number or email to make a sale.</li>
+  <li>We do not sell, rent or trade any information.</li>
+</ul>
+
+<h2><span class="num">3</span>Permissions and why Tillo needs them</h2>
+<div class="table">
+<table>
+<thead><tr><th>Permission</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td><strong>Camera</strong></td><td>To scan product barcodes. Asked for the first time you open the scanner; if you decline, you can still type codes or use a USB or Bluetooth scanner. Images are processed on the phone and never saved.</td></tr>
+<tr><td><strong>Nearby devices (Bluetooth connect)</strong></td><td>To print receipts on a Bluetooth receipt printer you have paired in your phone's settings. Not used to scan for devices, and not used for location.</td></tr>
+<tr><td><strong>Internet and network state</strong></td><td>To buy, restore and check a Tillo Pro subscription, and — only for a phone connected with an activation code — to sync with the business's back office. Selling never requires a connection.</td></tr>
+<tr><td><strong>Google Play billing</strong></td><td>To offer the optional Tillo Pro subscription.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2><span class="num">4</span>Backups, receipts and printing</h2>
+<p>These features move your data only where <strong>you</strong> send it:</p>
+<ul>
+  <li><strong>Backup.</strong> Tillo can save your whole shop to a single file, in a place you choose with the Android file picker — your phone's storage, Google Drive, or any other provider you have installed. The file is <strong>not encrypted</strong>, so that a forgotten password can never make your only copy unrecoverable; it holds your shop's details, products, stock and sales, and staff PINs only as hashes. Treat it like any business record and keep it somewhere private. Restoring reads a file you pick in the same way. We never receive a copy.</li>
+  <li><strong>Sharing a receipt.</strong> When you share a receipt, Tillo hands its text to the Android share sheet and the app you choose (for example WhatsApp or email) sends it. That app's own privacy policy then applies.</li>
+  <li><strong>Printing.</strong> Receipts are sent directly over Bluetooth to your printer. The printer's name, address and paper width are remembered on the phone only.</li>
+</ul>
+
+<h2><span class="num">5</span>Who we share information with</h2>
+<p>We do not share your shop's data with anyone, because we do not have it. The services below receive only what is described in section 1:</p>
+<div class="table">
+<table>
+<thead><tr><th>Provider</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td><strong>Google Play</strong></td><td>Distributing the app and processing Tillo Pro payments. <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</td></tr>
+<tr><td><strong>RevenueCat</strong></td><td>Verifying and restoring your Tillo Pro subscription, using an anonymous identifier. <a href="https://www.revenuecat.com/privacy/">RevenueCat Privacy Policy</a>.</td></tr>
+<tr><td><strong>Google ML Kit</strong></td><td>On-device barcode reading; may report scanner performance diagnostics as described above.</td></tr>
+<tr><td><strong>Supabase</strong></td><td>Hosting the SmartPOS cloud service — <em>only</em> for phones connected with a business's activation code. <a href="https://supabase.com/privacy">Supabase Privacy Policy</a>.</td></tr>
+</tbody>
+</table>
+</div>
+<p>We may also disclose information if required to by law, though for a phone-owned shop there is nothing on our side to disclose.</p>
+
+<h2><span class="num">6</span>How long data is kept, and how to delete it</h2>
+<ul>
+  <li><strong>Your shop's data</strong> stays on your phone until you delete it. You can edit or remove products at any time. <strong>Uninstalling Tillo, or clearing its storage in Android Settings, permanently erases everything</strong> — we cannot recover it, so make a backup first if you want to keep it. Because we never hold a copy, there is nothing you need to ask us to delete.</li>
+  <li><strong>Backup files</strong> stay wherever you saved them until you delete them there.</li>
+  <li><strong>Subscription records</strong> are kept by Google Play and RevenueCat for as long as needed to honour and restore your purchase and to meet tax and accounting obligations. You can manage or cancel the subscription in Google Play under <em>Payments &amp; subscriptions</em>.</li>
+  <li><strong>Data held for a business</strong> (activation-code phones only) is kept for as long as that business keeps its SmartPOS account. Ask the business, or contact us, to have it removed.</li>
+</ul>
+
+<h2><span class="num">7</span>Your rights</h2>
+<p>Depending on where you live, you may have the right to access, correct, delete or object to the processing of personal data about you. For data on your phone, you can exercise all of these directly in the app. For anything else described here, contact us at the address below and we will respond within a reasonable time. You may also complain to your local data-protection authority.</p>
+
+<h2><span class="num">8</span>Security</h2>
+<p>Your shop's data is held in Tillo's private storage area, which Android keeps separate from other apps. Staff PINs are stored only as salted hashes, never as the PINs themselves. Everything Tillo sends over the internet is encrypted with TLS.</p>
+<div class="box warn">
+<p>Because your shop lives on your phone, <strong>the phone is what protects it</strong>. Use a screen lock, and keep regular backups somewhere safe — if the phone is lost or broken, a backup file is the only way to get your shop back.</p>
+</div>
+
+<h2><span class="num">9</span>Children</h2>
+<p>Tillo is a business tool and is not directed to children under 13 (or the minimum age in your country). We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, contact us and we will delete it.</p>
+
+<h2><span class="num">10</span>Changes to this policy</h2>
+<p>We may update this policy as Tillo changes — for example, if optional cloud features are added. The new version will be posted on this page with a new "Last updated" date, and material changes will be noted in the app where appropriate. Continuing to use Tillo after a change means you accept the revised policy.</p>
+
+<h2><span class="num">11</span>Contact</h2>
+<p>Questions about this policy or your data:</p>
+<p><strong>TSolutions DWC LLC</strong><br>Email: <a href="mailto:info@tsolutions-dwc.com">info@tsolutions-dwc.com</a></p>
+</main>
+
+<footer><span>&copy; 2026 TSolutions DWC LLC &middot; Tillo</span><span>This page loads no scripts, fonts or trackers.</span></footer>
+</div>
+</body>
+</html>
