@@ -111,12 +111,12 @@
 </header>
 
 <main>
-<p>This policy applies to the Tillo point-of-sale application for Android ("Tillo", "we", "us", "our"), published on Google Play by TSolutions DWC LLC under the package name <code>com.tsolution.smartpos</code>. Tillo lets a shop sell, take payments, print or share receipts and keep track of products and stock, all from a phone.</p>
+<p>This policy applies to the Tillo point-of-sale application for Android ("Tillo", "we", "us", "our"), published on Google Play by TSolutions DWC LLC under the package name <code>com.tsolution.smartpos</code>. Tillo lets a shop sell, take payments, print or share receipts and keep track of products and stock, all from a phone. The same app is also used as a till for businesses on the <strong>SmartPOS back office</strong>, our cloud service for shops with several tills or stores; section 1 explains what changes when a phone is connected to it.</p>
 
 <p>By using Tillo you agree to the collection and use of information in accordance with this Privacy Policy. If you do not agree, please do not use the application.</p>
 
 <div class="box">
-<p><strong>In short.</strong> Tillo has <strong>no sign-up and no account</strong>. A shop set up on the phone is kept <strong>only on that phone</strong>: your products, prices, stock, sales and staff are never sent to us. There is <strong>no advertising, no analytics and no crash reporting</strong> in the app. The only things that leave your phone are what Google Play and RevenueCat need to sell and verify a Tillo Pro subscription, and the limited diagnostic data Google's on-device barcode scanner reports. We do not sell your data.</p>
+<p><strong>In short.</strong> Tillo has <strong>no sign-up and no account</strong>. A shop set up on the phone is kept <strong>only on that phone</strong>: your products, prices, stock, sales and staff are never sent to us. There is <strong>no advertising, no analytics and no crash reporting</strong> in the app. The only things that leave your phone are what Google Play and RevenueCat need to sell and verify a Tillo Pro subscription, and the limited diagnostic data Google's on-device barcode scanner reports. The one exception is a phone you choose to connect to a business's SmartPOS back office with an activation code: it then syncs that business's sales with its back office. We do not sell your data.</p>
 </div>
 
 <h2><span class="num">1</span>Information we collect</h2>
@@ -138,12 +138,22 @@
 <h3>Barcode scanner diagnostics</h3>
 <p>The camera scanner uses Google's <strong>ML Kit</strong> barcode scanning, with its model bundled inside the app, so codes are read <strong>entirely on your phone</strong>. Camera images are never stored and never sent to us or to Google. ML Kit may send Google limited technical data about how the scanner is performing — such as device model, operating system, app version and scan performance metrics — under <a href="https://developers.google.com/ml-kit/terms">Google's ML Kit terms</a>. It does not include the images or the barcodes read.</p>
 
-<h3>If you use an activation code from a business</h3>
-<p>Instead of setting up a new shop, a business that uses the SmartPOS back office can give you an activation code to connect the phone to its account. In that case the phone exchanges data with the SmartPOS cloud service we operate for that business: it receives the business's products, settings and staff, and sends it the sales made on the phone, which staff member made them, and the shift records. That data is held on behalf of <strong>the business that issued the code</strong>, which decides how it is used and is your first point of contact about it. A phone set up as its own shop never contacts this service.</p>
+<h3>If you connect the phone with an activation code</h3>
+<p>Instead of setting up a new shop, a phone can be connected to a business that uses the SmartPOS back office. The business's administrator creates a <strong>single-use activation code</strong> for one till in the back office — it expires after 24 hours and stops working once used — and gives it to whoever is setting up the phone, who enters it under <em>I have an activation code</em>. A phone set up as its own shop never contacts this service, and connecting is never required to use Tillo.</p>
+<p>Once connected, the phone exchanges data with the SmartPOS cloud service we operate for that business:</p>
+<ul>
+  <li><strong>Sent from the phone:</strong> each sale made on it — the items, prices, tax, discounts, totals, how it was paid, the invoice number, the time, and which staff member made it — and each shift, with its opening float and cash-up count. When the code is entered, the phone also sends a random identifier that the app generates for this installation. It is not your device's hardware ID or advertising ID.</li>
+  <li><strong>Received by the phone:</strong> the business's store details, products, prices and categories, its staff members' names and roles with their PINs as one-way hashes, and its till settings, colours and logo.</li>
+</ul>
+<p>The phone keeps working offline and sends sales when it next has a connection. The server gives the phone a private access token, and stores only a one-way hash of it.</p>
+<p>All of this data belongs to <strong>the business that issued the code</strong>. That business decides how the data is used and is your first point of contact about it; we process it on the business's behalf. To stop syncing, use <em>Clear this phone</em> in Settings. It removes the business's data from the phone, and will not run while any sale is still waiting to be sent, so none is lost. Data already sent stays in the business's back office (see section 6).</p>
+
+<h3>If your business uses the SmartPOS back office</h3>
+<p>The back office is a separate website used by business owners and managers to run their tills; people who only use the phone app never need it. Each back-office user signs in with an <strong>email address and password</strong>, handled by our hosting provider's authentication service. Passwords are stored only in hashed form. In the back office the business enters its organization and store details, its products and prices, its staff names and roles, its till settings, and optionally a logo and brand colours. <strong>Uploaded logos are stored at a public web address</strong> so that tills can display them without signing in, so don't upload anything you would not put on a receipt. The back office has no advertising, no analytics and no tracking.</p>
 
 <h2><span class="num">2</span>What we do not collect</h2>
 <ul>
-  <li>No account, email address, phone number or password is ever asked for.</li>
+  <li>No account, email address, phone number or password is ever asked for in the app. Only a business's back-office users sign in, on the back-office website.</li>
   <li>No advertising and no advertising ID.</li>
   <li>No analytics, usage tracking or crash reporting.</li>
   <li>No location. Bluetooth is used only to connect to printers you have already paired, so the app never scans for nearby devices.</li>
@@ -182,7 +192,7 @@
 <tr><td><strong>Google Play</strong></td><td>Distributing the app and processing Tillo Pro payments. <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</td></tr>
 <tr><td><strong>RevenueCat</strong></td><td>Verifying and restoring your Tillo Pro subscription, using an anonymous identifier. <a href="https://www.revenuecat.com/privacy/">RevenueCat Privacy Policy</a>.</td></tr>
 <tr><td><strong>Google ML Kit</strong></td><td>On-device barcode reading; may report scanner performance diagnostics as described above.</td></tr>
-<tr><td><strong>Supabase</strong></td><td>Hosting the SmartPOS cloud service — <em>only</em> for phones connected with a business's activation code. <a href="https://supabase.com/privacy">Supabase Privacy Policy</a>.</td></tr>
+<tr><td><strong>Supabase</strong></td><td>Hosting the SmartPOS cloud service and back-office sign-in — <em>only</em> for businesses on the SmartPOS back office and the phones they connect with an activation code. <a href="https://supabase.com/privacy">Supabase Privacy Policy</a>.</td></tr>
 </tbody>
 </table>
 </div>
@@ -193,14 +203,15 @@
   <li><strong>Your shop's data</strong> stays on your phone until you delete it. You can edit or remove products at any time. <strong>Uninstalling Tillo, or clearing its storage in Android Settings, permanently erases everything</strong> — we cannot recover it, so make a backup first if you want to keep it. Because we never hold a copy, there is nothing you need to ask us to delete.</li>
   <li><strong>Backup files</strong> stay wherever you saved them until you delete them there.</li>
   <li><strong>Subscription records</strong> are kept by Google Play and RevenueCat for as long as needed to honour and restore your purchase and to meet tax and accounting obligations. You can manage or cancel the subscription in Google Play under <em>Payments &amp; subscriptions</em>.</li>
-  <li><strong>Data held for a business</strong> (activation-code phones only) is kept for as long as that business keeps its SmartPOS account. Ask the business, or contact us, to have it removed.</li>
+  <li><strong>Data held for a business</strong> (the SmartPOS back office and the phones connected to it) is kept for as long as that business keeps its SmartPOS account, because sales records are business and tax records. The business can ask us to delete its account and all of its data. If you are a staff member or a phone user, ask the business first, or contact us. Clearing a connected phone removes the data from that phone only.</li>
+  <li><strong>Back-office sign-in details</strong> are kept while the user has access to the business's account. To have a back-office login deleted, contact us at the address below.</li>
 </ul>
 
 <h2><span class="num">7</span>Your rights</h2>
 <p>Depending on where you live, you may have the right to access, correct, delete or object to the processing of personal data about you. For data on your phone, you can exercise all of these directly in the app. For anything else described here, contact us at the address below and we will respond within a reasonable time. You may also complain to your local data-protection authority.</p>
 
 <h2><span class="num">8</span>Security</h2>
-<p>Your shop's data is held in Tillo's private storage area, which Android keeps separate from other apps. Staff PINs are stored only as salted hashes, never as the PINs themselves. Everything Tillo sends over the internet is encrypted with TLS.</p>
+<p>Your shop's data is held in Tillo's private storage area, which Android keeps separate from other apps. Staff PINs are stored only as salted hashes, never as the PINs themselves. Everything Tillo sends over the internet is encrypted with TLS. For connected phones, each business's data in the SmartPOS cloud service is kept separate from every other business's by access rules enforced in the database. Activation codes are single-use and expire after 24 hours.</p>
 <div class="box warn">
 <p>Because your shop lives on your phone, <strong>the phone is what protects it</strong>. Use a screen lock, and keep regular backups somewhere safe — if the phone is lost or broken, a backup file is the only way to get your shop back.</p>
 </div>
