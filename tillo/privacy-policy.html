@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tillo Privacy Policy</title>
 <meta name="description" content="What Tillo, the offline point-of-sale app, collects, where your shop's data is kept, and how to remove it.">
+<link rel="canonical" href="https://tillo.tsolutions-dwc.com/privacy-policy.html">
 <meta name="theme-color" content="#0E3B2C">
 <style>
   /* Tokens are the Tillo phone palette (ui/phone/theme/TilloTheme.kt in the app),
@@ -107,7 +108,7 @@
   <p class="eyebrow">Legal &middot; TSolutions DWC LLC</p>
   <h1>Privacy Policy</h1>
   <p>What Tillo collects, where your shop's data lives, and how to remove it.</p>
-  <span class="updated">Last updated: October 22, 2026</span>
+  <span class="updated">Last updated: November 8, 2026</span>
 </header>
 
 <main>
@@ -116,7 +117,7 @@
 <p>By using Tillo you agree to the collection and use of information in accordance with this Privacy Policy. If you do not agree, please do not use the application.</p>
 
 <div class="box">
-<p><strong>In short.</strong> Tillo has <strong>no sign-up and no account</strong>. A shop set up on the phone is kept <strong>only on that phone</strong>: your products, prices, stock, sales and staff are never sent to us. There is <strong>no advertising, no analytics and no crash reporting</strong> in the app. The only things that leave your phone are what Google Play and RevenueCat need to sell and verify a Tillo Pro subscription, and the limited diagnostic data Google's on-device barcode scanner reports. The version on Google Play has no way to send your shop's data anywhere. We do not sell your data.</p>
+<p><strong>In short.</strong> Tillo has <strong>no sign-up and no account</strong>. A shop set up on the phone is kept <strong>only on that phone</strong>: your products, prices, stock, sales and staff are never sent to us. There is <strong>no advertising</strong> in the app. What leaves your phone is what Google Play and RevenueCat need to sell and verify a Tillo Pro subscription, the limited diagnostic data Google's on-device barcode scanner reports, and <strong>anonymous usage data and crash reports</strong> that help us improve Tillo — which you can switch off in <em>Settings › Share usage data</em>. Usage data never includes your products, prices, sales or customers. The version on Google Play has no way to send your shop's data anywhere. We do not sell your data.</p>
 </div>
 
 <h2><span class="num">1</span>Information we collect</h2>
@@ -134,6 +135,15 @@
 <h3>Subscription information</h3>
 <p>Tillo is free to use, with an optional <strong>Tillo Pro</strong> subscription. Purchases are made through <strong>Google Play</strong> and verified through <strong>RevenueCat</strong>. RevenueCat assigns your installation a random, anonymous identifier — it is not linked to your name, email or shop — and receives the product you bought, its purchase and renewal status, and basic device information such as the app version, operating system and your IP address. <strong>We never receive your card or bank details</strong>; those stay with Google.</p>
 <p>Your plan is remembered on the phone, so Tillo keeps working when it is offline.</p>
+
+<h3>Usage data and crash reports — optional</h3>
+<p>Tillo uses <strong>PostHog</strong> to understand how the app is used and where it goes wrong, so we can fix and improve it. This is <strong>on by default and can be switched off at any time</strong> in <em>Settings › Share usage data</em>; once off, nothing more is sent.</p>
+<ul>
+  <li><strong>What is sent:</strong> which screens are opened and which actions are taken — for example "a product was added", "a sale was completed by cash with 3 items", "the Pro sheet was opened from Reports" — with counts, yes/no answers and categories; the app version, plan (Free or Pro), your shop's country and currency, and basic device information such as the operating system, device model and your IP address; and, if the app crashes, a technical report of where in the app's code it failed.</li>
+  <li><strong>Session recordings:</strong> a recording of how the screens are used — taps and the order of screens — so we can see where people get stuck. <strong>Every screen that shows your products, prices, stock, sales or shop details is blacked out</strong> in the recording, as are all text fields and images; only setup, help and empty screens are visible.</li>
+  <li><strong>What is never sent:</strong> your shop's name, phone number or address; product names, barcodes, prices or stock; the amount of any sale (at most a broad band such as "100–999"); staff names; or anything about your customers.</li>
+  <li><strong>Identifier:</strong> the data is tied to a random identifier that the app generates for this installation — not your name, email, device hardware ID or advertising ID. <em>Clear this phone</em> replaces it with a new one.</li>
+</ul>
 
 <h3>Barcode scanner diagnostics</h3>
 <p>The camera scanner uses Google's <strong>ML Kit</strong> barcode scanning, with its model bundled inside the app, so codes are read <strong>entirely on your phone</strong>. Camera images are never stored and never sent to us or to Google. ML Kit may send Google limited technical data about how the scanner is performing — such as device model, operating system, app version and scan performance metrics — under <a href="https://developers.google.com/ml-kit/terms">Google's ML Kit terms</a>. It does not include the images or the barcodes read.</p>
@@ -155,7 +165,7 @@
 <ul>
   <li>No account, email address, phone number or password is ever asked for in the app. Only a business's back-office users sign in, on the back-office website.</li>
   <li>No advertising and no advertising ID.</li>
-  <li>No analytics, usage tracking or crash reporting.</li>
+  <li>No usage data that identifies you or your shop — see "Usage data and crash reports" above, and switch it off whenever you like.</li>
   <li>No location. Bluetooth is used only to connect to printers you have already paired, so the app never scans for nearby devices.</li>
   <li>No contacts, photos, files, microphone or SMS. Backup files are read and written only through the Android file picker, one file at a time, when you choose.</li>
   <li>No personal information about your customers. Tillo does not ask for a customer's name, phone number or email to make a sale.</li>
@@ -191,6 +201,7 @@
 <tbody>
 <tr><td><strong>Google Play</strong></td><td>Distributing the app and processing Tillo Pro payments. <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</td></tr>
 <tr><td><strong>RevenueCat</strong></td><td>Verifying and restoring your Tillo Pro subscription, using an anonymous identifier. <a href="https://www.revenuecat.com/privacy/">RevenueCat Privacy Policy</a>.</td></tr>
+<tr><td><strong>PostHog</strong></td><td>Anonymous usage data, masked session recordings and crash reports, as described in section 1, processed in the United States. Optional — off in <em>Settings › Share usage data</em>. <a href="https://posthog.com/privacy">PostHog Privacy Policy</a>.</td></tr>
 <tr><td><strong>Google ML Kit</strong></td><td>On-device barcode reading; may report scanner performance diagnostics as described above.</td></tr>
 <tr><td><strong>Supabase</strong></td><td>Hosting the SmartPOS cloud service and back-office sign-in — <em>only</em> for businesses on the SmartPOS back office and the tills we set up for them. The version of Tillo on Google Play never contacts it. <a href="https://supabase.com/privacy">Supabase Privacy Policy</a>.</td></tr>
 </tbody>
@@ -202,6 +213,7 @@
 <ul>
   <li><strong>Your shop's data</strong> stays on your phone until you delete it. You can edit or remove products at any time. <strong>Uninstalling Tillo, or clearing its storage in Android Settings, permanently erases everything</strong> — we cannot recover it, so make a backup first if you want to keep it. Because we never hold a copy, there is nothing you need to ask us to delete.</li>
   <li><strong>Backup files</strong> stay wherever you saved them until you delete them there.</li>
+  <li><strong>Usage data and crash reports</strong> are kept in PostHog for a limited period and then deleted; session recordings are kept for a shorter period than events. Switching off <em>Share usage data</em> stops anything new being sent. Because this data is tied only to a random identifier, we cannot look it up by your name — to have it deleted, contact us and we will help you find your installation's identifier.</li>
   <li><strong>Subscription records</strong> are kept by Google Play and RevenueCat for as long as needed to honour and restore your purchase and to meet tax and accounting obligations. You can manage or cancel the subscription in Google Play under <em>Payments &amp; subscriptions</em>.</li>
   <li><strong>Data held for a business</strong> (the SmartPOS back office and the tills set up for it) is kept for as long as that business keeps its SmartPOS account, because sales records are business and tax records. The business can ask us to delete its account and all of its data. If you are a staff member, ask the business first, or contact us. Clearing a till removes the data from that till only.</li>
   <li><strong>Back-office sign-in details</strong> are kept while the user has access to the business's account. To have a back-office login deleted, contact us at the address below.</li>
