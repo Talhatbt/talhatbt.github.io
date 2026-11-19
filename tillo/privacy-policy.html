@@ -107,7 +107,7 @@
   <p class="eyebrow">Legal &middot; TSolutions DWC LLC</p>
   <h1>Privacy Policy</h1>
   <p>What Tillo collects, where your shop's data lives, and how to remove it.</p>
-  <span class="updated">Last updated: November 15, 2026</span>
+  <span class="updated">Last updated: November 19, 2026</span>
 </header>
 
 <main>
@@ -116,7 +116,7 @@
 <p>By using Tillo you agree to the collection and use of information in accordance with this Privacy Policy. If you do not agree, please do not use the application.</p>
 
 <div class="box">
-<p><strong>In short.</strong> Tillo has <strong>no sign-up and no account</strong>. A shop set up on the phone is kept <strong>only on that phone</strong>: your products, prices, stock, sales and staff are never sent to us. There is <strong>no advertising</strong> in the app. What leaves your phone is what Google Play and RevenueCat need to sell and verify a Tillo Pro subscription, the limited diagnostic data Google's on-device barcode scanner reports, your shop's country and the app version when Tillo checks for updated app settings, and <strong>anonymous usage data and crash reports</strong> that help us improve Tillo — which you can switch off in <em>Settings › Share usage data</em>. Usage data never includes your products, prices, sales or customers. Customer details you record for credit, and product photos, stay on your phone. When you email us from <em>Settings › Help</em>, your email app sends the message, not Tillo. The version on Google Play has no way to send your shop's data anywhere. We do not sell your data.</p>
+<p><strong>In short.</strong> Tillo has <strong>no sign-up and no account</strong>. A shop set up on the phone is kept <strong>only on that phone</strong>: your products, prices, stock, sales and staff are never sent to us. There is <strong>no advertising</strong> in the app. What leaves your phone is what Google Play and RevenueCat need to sell and verify a Tillo Pro subscription, the limited diagnostic data Google's on-device barcode scanner reports, your shop's country and the app version when Tillo checks for updated app settings (including the twice-a-day check behind update notifications, which come from the app itself, not from a push service), and <strong>anonymous usage data and crash reports</strong> that help us improve Tillo — which you can switch off in <em>Settings › Share usage data</em>. Usage data never includes your products, prices, sales or customers. Customer details you record for credit, and product photos, stay on your phone. When you email us from <em>Settings › Help</em>, your email app sends the message, not Tillo. The version on Google Play has no way to send your shop's data anywhere. We do not sell your data.</p>
 </div>
 
 <h2><span class="num">1</span>Information we collect</h2>
@@ -135,7 +135,9 @@
 <p><strong>Your customers' details are yours to look after.</strong> When you record a customer, you are the one collecting their information, and you decide what to keep. Only record what you need to keep track of credit, tell customers if the law where you trade requires it, and if a customer asks, edit their record to clear their phone number and note once they no longer owe you anything.</p>
 
 <h3>App settings and updates</h3>
-<p>When Tillo starts, and every few hours while it stays open, it asks our server for the current app settings: whether a newer version is available, the Free plan's product limit, the support contact details, and switches that can turn a feature off if it is broken. The request contains only <strong>your shop's country</strong> (so the settings can differ by country) and <strong>the app's version number</strong>. It carries no identifier, no shop name and nothing about your products, sales or customers. Our hosting provider, Supabase, sees your IP address as part of the connection, as any web server does. If the server cannot be reached, Tillo keeps the last settings it received.</p>
+<p>When Tillo starts, every few hours while it stays open, and about twice a day in the background when your phone has a connection, it asks our server for the current app settings: whether a newer version is available, any short message we have for Tillo users (such as a support holiday), the Free plan's product limit, the support contact details, and switches that can turn a feature off if it is broken. The request contains only <strong>your shop's country</strong> (so the settings can differ by country) and <strong>the app's version number</strong>. It carries no identifier, no shop name and nothing about your products, sales or customers. Our hosting provider, Supabase, sees your IP address as part of the connection, as any web server does. If the server cannot be reached, Tillo keeps the last settings it received.</p>
+<p><strong>Update notifications.</strong> If the background check finds a new version or a new message, Tillo shows one notification on your phone, once for each. These notifications are created by the app on your phone: Tillo uses no push-notification service, so no push token or device address is created or sent anywhere. Tillo asks for permission to show notifications after a sale, not when you first open it, and if you decline it does not ask again for 30 days. You can turn them off at any time in Android Settings › Apps › Tillo › Notifications. Which version or message was last shown is remembered on the phone only.</p>
+<p><strong>Updating from inside the app.</strong> When you tap <em>Update</em>, Tillo asks Google Play, through Google's in-app update service on your phone, to download the new version while you keep working, and then offers <em>Restart to finish</em>. This happens between Tillo and the Play Store app on your phone, under Google's terms; we receive nothing from it. If Google Play cannot do this, Tillo opens its Google Play listing instead.</p>
 
 <h3>When you contact us</h3>
 <p><em>Settings › Help</em> can open your own email app with a message already written to us. The backoffice request form does the same, if it is offered where you are. <strong>Tillo itself sends nothing.</strong> You see the whole message and decide whether to send it. If you do, we receive:</p>
@@ -179,6 +181,7 @@
 <ul>
   <li>No account, email address or password is ever asked for in the app. The backoffice request form asks for a name and a phone number, and optionally an email address, but they reach us only if you send the email yourself (see "When you contact us"). Only a business's back-office users sign in, on the back-office website.</li>
   <li>No advertising and no advertising ID.</li>
+  <li>No push notifications from a server and no push token. Update notifications are made by the app on your phone (section 1).</li>
   <li>No usage data that identifies you or your shop — see "Usage data and crash reports" above, and switch it off whenever you like.</li>
   <li>No location. Bluetooth is used only to connect to printers you have already paired, so the app never scans for nearby devices.</li>
   <li>No access to your contacts, photo library, files, microphone or SMS. A product photo comes from the camera, or from the Android photo picker, which shares only the one picture you choose. Backup files are read and written only through the Android file picker, one file at a time, when you choose.</li>
@@ -192,8 +195,10 @@
 <thead><tr><th>Permission</th><th>Why</th></tr></thead>
 <tbody>
 <tr><td><strong>Camera</strong></td><td>To scan product barcodes. Asked for the first time you open the scanner or take a product photo; if you decline, you can still type codes or use a USB or Bluetooth scanner, or choose a photo from your gallery. Scanner images are processed on the phone and never saved. A product photo you take is saved as a small copy inside the app (section 1). Neither is ever sent to us.</td></tr>
-<tr><td><strong>Nearby devices (Bluetooth connect)</strong></td><td>To print receipts on a Bluetooth receipt printer you have paired in your phone's settings. Not used to scan for devices, and not used for location.</td></tr>
+<tr><td><strong>Nearby devices (Bluetooth connect)</strong></td><td>To print receipts and shelf labels on a Bluetooth receipt printer you have paired in your phone's settings. Not used to scan for devices, and not used for location.</td></tr>
 <tr><td><strong>Internet and network state</strong></td><td>To buy, restore and check a Tillo Pro subscription; to fetch the app settings described in section 1; to send usage data unless you switch it off; and — only on tills we set up for a business's back office — to sync with it. Selling never requires a connection.</td></tr>
+<tr><td><strong>Notifications</strong></td><td>To tell you once when a new version of Tillo or a message from us is available (section 1). Asked after a sale, never when you first open the app. If you decline, Tillo works exactly the same and shows the news inside the app instead.</td></tr>
+<tr><td><strong>Run at startup, prevent the phone from sleeping, foreground service</strong></td><td>Added by Android's scheduling library (WorkManager) so the twice-a-day check for app settings still runs after the phone restarts and can finish once started. It runs only when the phone has a connection and sends only your shop's country and the app version, as described in section 1. Tillo does not run anything else in the background.</td></tr>
 <tr><td><strong>Google Play billing</strong></td><td>To offer the optional Tillo Pro subscription.</td></tr>
 </tbody>
 </table>
@@ -205,7 +210,7 @@
   <li><strong>Backup.</strong> Tillo can save your whole shop to a single file, in a place you choose with the Android file picker — your phone's storage, Google Drive, or any other provider you have installed. The file is <strong>not encrypted</strong>, so that a forgotten password can never make your only copy unrecoverable; it holds your shop's details, products and their photos, stock, sales, and your customers with their names, phone numbers and credit history, with staff PINs only as hashes. Because it contains your customers' details, treat it like any business record and keep it somewhere private. Restoring reads a file you pick in the same way. We never receive a copy.</li>
   <li><strong>Sharing a receipt.</strong> When you share a receipt, Tillo hands its text to the Android share sheet and the app you choose (for example WhatsApp or email) sends it. That app's own privacy policy then applies.</li>
   <li><strong>Payment reminders.</strong> When you send a customer a reminder, Tillo opens WhatsApp with that customer's phone number and a message showing what they owe. You see the message, and WhatsApp sends it only if you tap send. WhatsApp's privacy policy then applies. A credit settlement slip is shared the same way as a receipt.</li>
-  <li><strong>Printing.</strong> Receipts are sent directly over Bluetooth to your printer. The printer's name, address and paper width are remembered on the phone only.</li>
+  <li><strong>Printing.</strong> Receipts and shelf labels are sent directly over Bluetooth to your printer. A label carries the product's name, price and barcode; if a product has no barcode, Tillo gives it an in-store code, saved with the product on your phone, so its label scans at the till. The printer's name, address and paper width are remembered on the phone only.</li>
 </ul>
 
 <h2><span class="num">5</span>Who we share information with</h2>
@@ -214,7 +219,7 @@
 <table>
 <thead><tr><th>Provider</th><th>Purpose</th></tr></thead>
 <tbody>
-<tr><td><strong>Google Play</strong></td><td>Distributing the app and processing Tillo Pro payments. <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</td></tr>
+<tr><td><strong>Google Play</strong></td><td>Distributing the app, processing Tillo Pro payments, and downloading updates from inside the app. <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</td></tr>
 <tr><td><strong>RevenueCat</strong></td><td>Verifying and restoring your Tillo Pro subscription, using an anonymous identifier. <a href="https://www.revenuecat.com/privacy/">RevenueCat Privacy Policy</a>.</td></tr>
 <tr><td><strong>PostHog</strong></td><td>Anonymous usage data, masked session recordings and crash reports, as described in section 1, processed in the United States. Optional — off in <em>Settings › Share usage data</em>. <a href="https://posthog.com/privacy">PostHog Privacy Policy</a>.</td></tr>
 <tr><td><strong>Google ML Kit</strong></td><td>On-device barcode reading; may report scanner performance diagnostics as described above.</td></tr>
